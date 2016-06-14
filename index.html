@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>陶行行个人站</title>
+    <meta name="keywords" content="陶行行,陶行行个人站,Web前端个人站">
+    <meta name="description" content="陶行行个人站,Web前端个人站">
+    <link rel="shortcut icon" href="images/logoicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/logoicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+  <div id="loading">
+    <div></div>
+  <p>Loading <span>.</span><span>.</span><span>.</span></p></div>
+  <audio src="music/music.mp3"></audio>
+  <script type="text/javascript">
+      var oAudio = document.getElementsByTagName('audio')[0];
+      var oLoading = document.getElementById("loading");
+      if(window.navigator.userAgent.indexOf('Chrome')!= -1){
+        document.onreadystatechange = loading;
+        setTimeout(loading,10000);
+        function loading(){
+            if(document.readyState == "complete"){ 
+                oLoading.style.display = "none";
+                oAudio.play();
+            }    
+        }
+       }else if(window.navigator.userAgent.indexOf('Firefox')!=-1 || window.navigator.userAgent.indexOf('MSIE')!=-1){
+             oLoading.innerHTML = '<strong>请使用谷歌浏览器欣赏全部效果！</strong>';
+       }else{
+             oLoading.innerHTML = '<strong>请使用谷歌浏览器欣赏全部效果！</strong>';
+       }
+    </script>
+    <ul id="banner" ><li style="opacity:1; filter:alpha(opacity:100);" class="no1"></li><li class="no2"></li><li class="no3"></li><li class="no4"></li><li class="no5"></li><li class="no6"></li>
+    </ul>
+    <div class="center">
+    	<div class="btn"><a href="list.html">点击进入</a></div>
+        <div id="rocket"></div>	
+    </div>
+    <div id="color_plus"></div>
+    <script type="text/javascript" src="js/move.js"></script>
+    <script type="text/javascript">
+      var aLi = document.getElementsByTagName('li');
+      var oRocket = document.getElementById('rocket');
+      var nowImg = 0;
+      setInterval(fadeOut_In,2000);
+        function fadeOut_In(){
+          nowImg ++;
+          nowImg %= aLi.length;
+          for(var i=0;i<aLi.length;i++){
+            move(aLi[i],{'opacity':0},{'duration':300,easing:Tween.Linear});
+          }
+            move(aLi[nowImg],{'opacity':1},{'duration':500,easing:Tween.Linear});
+        }
+   
+    var oPlus = document.getElementById('color_plus');
+    document.onmousemove =function(ev){
+        var oEvt = ev || event ;
+        var oSpan = document.createElement('span');
+        setTimeout(function(){
+            oSpan.innerHTML = '+';
+        } ,100);
+        var r=parseInt(Math.random()*256);
+        var g=parseInt(Math.random()*256);
+        var b=parseInt(Math.random()*256);
+        oSpan.style.color  = 'rgb('+r+','+g+','+b+')';
+        oPlus.appendChild(oSpan);
+        var scrTop=document.documentElement.scrollTop||document.body.scrollTop;
+        var scrLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+        var t = oSpan.offsetTop + scrTop;
+        var l = oSpan.offsetLeft + scrLeft;
+        oSpan.style.left = oEvt.clientX + l+ 'px';
+        oSpan.style.top = oEvt.clientY + t +'px';
+        var W = document.documentElement.clientWidth;
+        var H = document.documentElement.clientHeight/2;
+        setTimeout(function(){
+            move(oSpan,{'top':(t+H),'left':(Math.random()*(l+W))},{
+                complete:function(){
+                oPlus.removeChild(oSpan);
+            }})
+        } ,100);
+    };
+
+  </script>
+</body>
+</html>
