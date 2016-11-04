@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title ></title>
+   
+   <style>
+   body{margin:100px;}
+
+   div{
+    width:200px;
+    height: 100px;background: #d5dbe0;
+   }
+
+   </style>
+
+</head>
+<body>
+
+
+
+<div id="div1"></div>
+
+<button class="content" id="verif_btn">按钮</button>
+
+
+
+
+
+<script>
+
+var oSub_btn = Query("#verif_btn");
+
+
+Bind(oSub_btn,function(){
+
+  alert("OK")
+
+});
+
+
+
+function Query(e){ //获取单个元素
+  return document.querySelector(e);
+} 
+function QueryAll(e){ //获取一组元素
+  return document.querySelectorAll(e);
+}
+function Bind(obj,fn){ //绑定点击事件
+     var E =  typeof obj ==="string"?Query(obj):obj;
+     return E.addEventListener("click",fn,false);
+}
+
+
+
+
+</script>
+</body>
+     
+</html>
+
