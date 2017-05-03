@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/**
+ * Copyright (C), 2016, 上海赛可电子商务有限公司
+ * Date:     2016-10-11
+ * Description: 双十一主会场
+ */
+
+@import "base/_common";
+.test-history-bread{
+	background-color:$color-bg1;
+}
+.test-history-list{
+	li{
+		padding:0.2rem 0.3rem;
+		border-bottom:1px solid $color-border1;
+		a{
+			display:block;
+			padding:0;
+			min-height:0.4rem;
+			line-height:0.4rem;
+			color:$color-txt-5;
+			font-size:0.3rem;
+			text-decoration: none;
+			overflow:hidden;
+			.test-history-cont{
+				width:5.5rem;
+				.li-title{
+					line-height: 0.5rem;
+					height: 1rem;
+					padding-top:0.1rem;
+					font-size:0.28rem;
+					color:$color-txt-5;
+					overflow: hidden;  
+					text-overflow: ellipsis;  
+					word-break: break-all;  
+					-webkit-box-orient: vertical;  
+					-webkit-line-clamp:2;
+					display: -webkit-box;
+		    		display: -moz-box;
+				}
+				.li-author{
+					line-height: 0.5rem;
+					font-size:0.28rem;
+					color:$color-txt-3;
+				}
+			}
+
+			.test-history-cont,i{
+				display: inline-block;
+				vertical-align: middle;
+			}
+			i{
+				width:0.75rem;
+				height:0.75rem;
+				line-height:0.65rem;
+				background:url(../images/fs-bg.png) no-repeat;
+				background-size:100% 100%;
+				font-size:0.6rem;
+				text-align:center;
+				color:$color-main;
+				margin-left:0.3rem;
+			}
+		}
+	}
+}

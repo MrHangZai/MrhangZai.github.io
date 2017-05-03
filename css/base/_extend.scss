@@ -1,0 +1,11 @@
+/* extend */
+
+//$common:sprite-map("common/*.png",$spacing:5px,$layout: diagonal);
+$skin:sprite-map("index/_icon_channel/*.png",$spacing:5px);
+%channelMaps{
+	$width:sprite-width($skin);
+	$height:sprite-height($skin);
+	background-image:$skin;
+	background-repeat:no-repeat;
+	background-size:rem-calc($width $height);
+}

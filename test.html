@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>测试</title>
+<script src="js/mobile-base.js"></script>
+<link href="css/mobile-reset.css" rel="stylesheet" />
+<link href="css/public.css" rel="stylesheet" />
+<link href="css/test.css" rel="stylesheet" />
+<script>
+collectTypeList = [];
+</script>
+</head>
+<body>
+
+<header class="pub-header header-white">
+	<a class="title-left-node" href="javascript:;">
+		<i class="btn-title-close"></i>
+	</a>
+	<div class="title-center-node">
+		测试
+	</div>
+	<a class="title-right-node" href="javascript:;">
+		<i class="btn-title-heart"></i>
+	</a>
+</header>
+
+<!-- banner | start-->
+<section class="banner-single">
+	<img src="images/test-banner.jpg"/>
+</section>
+<!-- banner | end-->
+
+<ul class="test-page-cont">
+	<li>
+		<div class="test-page-name">
+			1 性别，姓名（单行文本）<span class="must">*</span>
+		</div>
+		<div class="test-page-answer">
+			<input type="text" value="" id="your-name" placeholder="提示文言"/>
+		</div>
+		<div class="test-page-error">
+			此项为必填
+		</div>
+	</li>
+	<li>
+		<div class="test-page-name">
+			2 性别，姓名性别，姓名性别，姓名性别，姓名性别，姓名性别，姓名性别，姓名性别，姓名性别，姓名（多行文本）<span class="must">*</span>
+		</div>
+		<div class="test-page-answer">
+			<textarea placeholder="提示文言" id="your-info"></textarea>
+		</div>
+		<div class="test-page-error">
+			此项为必填
+		</div>
+	</li>
+	<li>
+		<div class="test-page-name">
+			2 单选
+		</div>
+		<div class="test-page-answer">
+			<div class="radius-cont-box cur">
+				男
+				<span class="radius-btn">
+					<i></i>
+				</span>
+			</div>
+			<div class="radius-cont-box">
+				女
+				<span class="radius-btn">
+					<i></i>
+				</span>
+			</div>
+		</div>
+		<div class="test-page-error">
+			此项为必填
+		</div>
+	</li>
+	<li>
+		<div class="test-page-name">
+			2 单选
+		</div>
+		<div class="test-page-answer">
+			<div class="radius-cont-box cur">
+				男
+				<span class="radius-btn">
+					<i></i>
+				</span>
+			</div>
+			<div class="radius-cont-box">
+				女
+				<span class="radius-btn">
+					<i></i>
+				</span>
+			</div>
+		</div>
+		<div class="test-page-error">
+			此项为必填
+		</div>
+	</li>
+	<li>
+		<div class="test-page-name">
+			3 复选
+		</div>
+		<div class="test-page-answer">
+			<div class="check-cont-box cur">
+				男
+				<span class="check-btn">
+					<i></i>
+				</span>
+			</div>
+			<div class="check-cont-box">
+				女
+				<span class="check-btn">
+					<i></i>
+				</span>
+			</div>
+		</div>
+		<div class="test-page-error">
+			此项为必填
+		</div>
+	</li>
+	<li>
+		<div class="test-page-name">
+			4 下拉（日期，地区，出生年月）
+		</div>
+		<div class="test-page-answer">
+			<select>
+			</select>
+		</div>
+		<div class="test-page-error">
+			此项为必填
+		</div>
+	</li>
+	<li>
+		<div class="test-page-name">
+			5 日期区间
+		</div>
+		<div class="test-page-answer clearfix">
+			<input class="qj" type="date" value="" placeholder="提示文言"/>
+			<div class="qj-span">至</div>
+			<input class="qj" type="date" value="" placeholder="提示文言"/>
+		</div>
+		<div class="test-page-error">
+			此项为必填
+		</div>
+	</li>
+</ul>
+<div class="a-center test-next-box">
+	<a href="test-subject.html" class="com-buttom green1" id="js-next">下一步</a>
+</div>
+
+<script src="js/zepto-1.1.6.js"></script>
+<script>
+ $('.check-cont-box').on('click',function(){
+ 	var hasCur = $(this).hasClass('cur');
+ 	if(hasCur){
+ 		$(this).removeClass('cur')
+ 	} else {
+ 		$(this).addClass('cur')
+ 	}
+ });
+ $('.radius-cont-box').on('click',function(){
+ 	var parent = $(this).parents('.test-page-answer');
+ 	var xdNode = parent.find('.radius-cont-box');
+ 	xdNode.removeClass('cur');
+ 	$(this).addClass('cur');
+ });
+
+ var nameNode = $('#your-name');
+ var infoNode = $('#your-info');
+ $('#js-next').on('click',function(){
+ 	var nameVal = nameNode.val();
+ 	var infoVal = infoNode.val();
+ 	var nodePos;
+
+ 	$('.test-page-error').hide();
+ 	if($.trim(nameVal) == ''){
+ 		nameNode.parents('li').find('.test-page-error').show();
+ 		nodePos = nameNode.parents('li').offset().top;
+ 		$(window).scrollTop(nodePos);
+ 		return;
+ 	} else if($.trim(infoVal) == ''){
+ 		infoNode.parents('li').find('.test-page-error').show();
+ 		nodePos = infoNode.parents('li').offset().top;
+ 		$(window).scrollTop(nodePos);
+ 	}
+ });
+</script>
+</body>
+</html>

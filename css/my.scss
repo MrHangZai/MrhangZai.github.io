@@ -1,0 +1,459 @@
+@charset "UTF-8";
+/**
+ * Copyright (C), 2016, 上海赛可电子商务有限公司
+ * Date:     2016-10-11
+ * Description: 双十一主会场
+ */
+
+@import "base/_common";
+
+.banner-control{
+	position:relative;
+	width:100%;
+	height:2.79rem;
+	background:url(#{$imgurl-base}/bannner-bg.jpg) no-repeat;
+	background-size:100% 100%;
+}
+.lable-name{
+	font-size:0.38rem;
+	color:#fff;
+	height:0.6rem;
+	line-height:0.6rem;
+	text-align:center;
+	padding-top:0.9rem;
+}
+.lable-control-box{
+	padding-top:0.2rem;
+	text-align:center;
+	font-size:0.26rem;
+	color:#fff;
+}
+
+
+/*我的收藏*/
+
+.collection-knowledge-list{
+	ul {
+		padding-left:0.3rem;
+		padding-top:0.3rem;
+		li{
+			width:3.3rem;
+			float:left;
+			background-color:#fff;
+			border-radius:0.1rem;
+			margin-right:0.3rem;
+			margin-bottom:0.3rem;
+			overflow:hidden;
+			box-shadow:#ddd 0 0 0.15rem;
+		}
+		a{
+			display:block;
+			text-decoration:none;
+			padding-bottom:0.3rem;
+		}
+		.img-box{
+			height:1.3rem;
+			overflow:hidden;
+			position:relative;
+			.img-box-control{
+				position:absolute;
+				width:100%;
+				height:0.42rem;
+				line-height:0.42rem;
+				left:0;
+				bottom:0;
+				font-size:0.18rem;
+
+				span{
+					padding-left:0.15rem;
+					color:#fff;
+				}
+			}
+		}
+		.name-box{
+			padding:0.25rem 0 0 0.15rem;
+			height:0.8rem;
+			line-height:0.4rem;
+			font-size:0.28rem;
+			color:$color-txt-1;
+			text-decoration: none;
+			overflow: hidden;  
+			text-overflow: ellipsis;  
+			word-break: break-all;  
+			-webkit-box-orient: vertical;  
+			-webkit-line-clamp:2;
+			display: -webkit-box;
+    		display: -moz-box;
+    		position:relative;
+
+    		.bs{
+    			position:absolute;
+				width:0.08rem;
+				height:0.32rem;
+				top:0.3rem;
+				left:0;
+				background-color:$color-main;
+    		}
+		}
+		.author-box{
+			padding:0.12rem 0 0 0.15rem;
+			height:0.4rem;
+			line-height:0.4rem;
+			font-size:0.24rem;
+			color:$color-txt-3;
+    		.span-b{
+    			line-height:0.4rem;
+				color:$color-txt-3;
+    			display:inline-block;
+    			border-bottom:1px solid #e1e1e1;
+    		}
+		}
+		.content-box{
+			padding:0.2rem 0 0 0.15rem;
+			height:0.8rem;
+			line-height:0.4rem;
+			font-size:0.28rem;
+			color:$color-txt-4;
+			text-decoration: none;
+			overflow: hidden;  
+			text-overflow: ellipsis;  
+			word-break: break-all;  
+			-webkit-box-orient: vertical;  
+			-webkit-line-clamp:2;
+			display: -webkit-box;
+    		display: -moz-box;
+    	}
+	}
+}
+
+.collection-paper-list{
+	li{
+		padding:0 0.2rem 0 0.3rem;
+		a{
+			padding-left:2.2rem;
+			position:relative;
+			display:block;
+			text-decoration: none;
+			padding-bottom:0.22rem;
+			.paper-info{
+				position:absolute;
+				top:0.32rem;
+				left:0;
+			}
+			.img-box{
+				height:1.4rem;
+				width:1.94rem;
+				overflow:hidden;
+				border-radius:0.05rem;
+				position:relative;
+				.img-box-control{
+					position:absolute;
+					width:100%;
+					height:0.42rem;
+					left:0;
+					bottom:0;
+					font-size:0.18rem;
+
+					span{
+						padding-left:0.15rem;
+						color:#fff;
+						i{
+							display:inline-block;
+							vertical-align: middle;
+							font-style: normal;
+						}
+					}
+				}
+			}
+			.li-title{
+				line-height: 0.5rem;
+				height: 1rem;
+				padding-top:0.29rem;
+				font-size:0.28rem;
+				color:$color-txt-5;
+				overflow: hidden;  
+				text-overflow: ellipsis;  
+				word-break: break-all;  
+				-webkit-box-orient: vertical;  
+				-webkit-line-clamp:2;
+				display: -webkit-box;
+	    		display: -moz-box;
+			}
+			.li-author{
+				line-height: 0.5rem;
+				font-size:0.28rem;
+				color:$color-txt-3;
+			}
+		}
+		border-bottom:1px solid $color-border1;
+	} 
+}
+
+
+/*我的信息*/
+.my-info{
+	ul{
+		padding-bottom:0.2rem;
+		
+		li{
+			border-bottom:1px solid $color-border1;
+			padding:0.2rem 0.2rem 0.2rem 0.3rem;
+			font-size:0;
+			background-color:#fff;
+			.li-node1,.li-node2,.li-node3{
+				display:inline-block;
+				vertical-align: middle;
+
+			}
+			.li-node1{
+				width:1.45rem;
+				line-height:0.4rem;
+				padding:0.1rem 0;
+				font-size:0.3rem;
+				color:$color-txt-5;
+			}
+			.li-node2{
+				width: 5.1rem;
+    			padding-right: 0.2rem;
+				font-size:0.3rem;
+				color:$color-txt-3;
+				text-align:right;
+				img{
+					width:1.1rem;
+					height:1.1rem;
+					background-color:#87d683;
+				}
+				input,select{
+					border:0px;
+					width:100%;
+					height:0.4rem;
+					padding:0;
+					line-height:0.4rem;
+					color:$color-txt-5;
+					font-size:0.3rem;
+					text-align:right;
+					background-color:#fff;
+					direction: rtl;
+					moz-appearance: none;
+					-webkit-appearance:none;
+					appearance:none;
+				}
+				select{
+					moz-appearance: none;
+					-webkit-appearance:none;
+					appearance:none;
+					direction: rtl;
+				}
+				select option {
+				    direction: ltr;
+				}
+			}
+			.li-node3{
+				width:0.21rem;
+			}
+		}
+	}
+}
+/*编辑我的信息*/
+.my-info-edit{
+	padding-top:0.39rem;
+	ul{
+		border-top:1px solid $color-border;
+		li{
+			padding:0.2rem;
+			line-height:0.6rem;
+			padding-left:0.3rem;
+			padding-right:0.3rem;
+			background-color:#fff;
+			border-bottom:1px solid $color-border;
+			font-size:0;
+			input,select,textarea{
+				border:0px;
+				width:100%;
+				height:0.6rem;
+				padding:0;
+				line-height:0.6rem;
+				color:$color-txt-5;
+				font-size:0.3rem;
+				text-align:left;
+				background-color:#fff;
+			}
+			textarea{
+				height:2rem;
+				resize:none;
+			}
+		}
+	}
+}
+
+/*已登陆-我的*/
+.mylogined-control{
+	position:relative;
+	width:100%;
+	height:3.43rem;
+	background:url(#{$imgurl-base}/my-banner-logined.jpg) no-repeat;
+	background-size:100% 100%;
+}
+.label-img-box{
+	padding:0.5rem 0 0.17rem 0;
+	display:block;
+	text-decoration:none;
+}
+.label-img{
+	width:1.5rem;
+	height:1.5rem;
+	overflow:hidden;
+	margin:0 auto;
+	border-radius:50% 50%;
+	img{
+		width:100%;
+		height:100%;
+		display:block;
+	}
+}
+.lable-name{
+	font-size:0.36rem;
+	color:#fff;
+	height:0.5rem;
+	line-height:0.5rem;
+	text-align:center;
+}
+.mylogined-control .lable-name{
+	padding-top:0;
+	display:block;
+	text-decoration:none;
+}
+.lable-subtitle{
+	font-size:0.24rem;
+	color:#fff;
+	line-height:0.35rem;
+	text-align:center;
+	padding-top:0.13rem;
+}
+
+.author-banner{
+	.label-img-box{
+		padding:0.35rem 0 0.15rem 0;
+	}
+	.label-img{
+		width:1.2rem;
+		height:1.2rem;
+		overflow:hidden;
+		margin:0 auto;
+		border-radius:50% 50%;
+		img{
+			width:100%;
+			height:100%;
+			display:block;
+		}
+	}
+	.lable-name{
+		padding-top:0;
+		font-size:0.32rem;
+		height:0.4rem;
+		line-height:0.4rem;
+	}
+	.lable-subtitle{
+		padding-top:0.03;
+	}
+}
+
+.my-page-menu{
+	padding:0.29rem 0.3rem;
+	background-color:#fff;
+	.fgf{
+		display:block;
+		float:left;
+		width:0.02rem;
+		height:0.74rem;
+		overflow:hidden;
+		background-color:$color-border1;
+		margin-top:0.21rem;
+	}
+	a{
+		display:block;
+		text-decoration: none;
+		text-align:center;
+		float:left;
+		width:2.28rem;
+
+		.my-menu-icon{
+			height:0.73rem;
+			line-height:0.73rem;
+			text-align:center;
+		}
+		.icon-star1{
+			width:0.62rem;
+			height:0.59rem;
+			display: inline-block;
+			vertical-align: middle;
+			background-size:100% 100%;
+		}
+		.icon-wjj{
+			width:0.53rem;
+			height:0.5rem;
+			display: inline-block;
+			vertical-align: middle;
+			background-size:100% 100%;
+		}
+		.icon-history{
+			width:0.49rem;
+			height:0.56rem;
+			display: inline-block;
+			vertical-align: middle;
+			background-size:100% 100%;
+		}
+
+		.my-menu-text{
+			font-size:0.24rem;
+			color:$color-txt-5;
+			line-height: 150%;
+		}
+	}
+}
+
+/*主题列表*/
+.theme-list{
+	padding:0.4rem 0.3rem;
+	li{
+		padding-bottom:0.3rem;
+		float:left;
+		width:33.3%;
+		a{
+			text-decoration: none;
+			text-align:center;
+			display:block;
+
+			.theme-li-img{
+				height:1.3rem;
+				width:1.8rem;
+				font-size:0;
+				text-align:center;
+				border-radius:0.1rem;
+				overflow:hidden;
+				margin:0 auto;
+				img{
+					height:1.3rem;
+					width:1.8rem;
+					display:block;
+				}
+			}
+			.theme-li-name{
+				margin-top:0.15rem;
+				line-height: 0.35rem;
+				height: 0.35rem;
+				font-size:0.24rem;
+				color:$color-txt-5;
+				overflow: hidden;  
+				text-overflow: ellipsis;  
+				word-break: break-all;  
+				-webkit-box-orient: vertical;  
+				-webkit-line-clamp:2;
+				display: -webkit-box;
+	    		display: -moz-box;
+			}
+		}
+	} 
+}
+
+/*作者专题页*/

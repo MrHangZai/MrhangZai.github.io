@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/**
+ * Copyright (C), 2016, 上海赛可电子商务有限公司
+ * Date:     2016-10-11
+ * Description: 双十一主会场
+ */
+
+@import "base/_common";
+
+.result-cont{
+	padding:0.25rem 0 0 0.3rem;
+	.result-cont-li{
+		width:1.55rem;
+		float:left;
+		padding-bottom:0.18rem;
+		margin-right: 0.19rem;
+	}
+	.result-icon-box{
+		text-align:center;
+		padding:0.18rem 0 0.18rem 0;
+	}
+	.result-icon-box .yuan{
+		width:0.66rem;
+		height:0.66rem;
+		display:inline-block;
+		vertical-align: middle;
+		text-align:center;
+		font-size:0;
+		i{
+			display:inline-block;
+			vertical-align: middle;
+		}
+		.fgf{
+			width:0px;
+			overflow:hidden;
+			height:0.66rem;
+			display:inline-block;
+			vertical-align: middle;
+		}
+	}
+	.bg-color1{
+		background-color:#69c7ef;
+	}
+	.bg-color2{
+		background-color:#ffcf2a;
+	}
+	.bg-color3{
+		background-color:#b7d543;
+	}
+	.bg-color4{
+		background-color:#24cccd;
+	}
+	.icon-home{
+		width:0.29rem;
+		height:0.36rem;
+		display:inline-block;
+		font-size:0;
+	}
+	.icon-star{
+		width:0.38rem;
+		height:0.37rem;
+		display:inline-block;
+		font-size:0;
+	}
+	.icon-right{
+		width:0.36rem;
+		height:0.27rem;
+		display:inline-block;
+		font-size:0;
+	}
+	.icon-time{
+		width:0.42rem;
+		height:0.42rem;
+		display:inline-block;
+		font-size:0;
+	}
+
+	.result-score-box{
+		text-align:center;
+		height:0.52rem;
+		line-height: 0.52rem;
+		color:$color-txt-1;
+		font-size:0.4rem;
+		.min-face{
+			font-size:0.28rem;
+		}
+	}
+	.result-ranking-box{
+		text-align:center;
+		color:$color-txt-3;
+		font-size:0.22rem;
+		height:0.42rem;
+		line-height: 0.42rem;
+	}
+}
+
+.test-report-cont{
+	.test-cont-info{
+		font-size:0.28rem;
+		padding:0.2rem 0.1rem 0.18rem 0.3rem;
+		color:$color-txt-3;
+		background-color:#f9f9f5;
+		line-height: 0.5rem;
+		h3{
+			color:$color-txt-1;
+			font-weight:100;
+		}
+	}
+	ul li{
+		border-bottom:1px solid $color-border1;
+		a {
+			border-left:0.13rem solid #ede9e9;
+			line-height:0.48rem;
+			color:$color-txt-1;
+			font-size:0.28;
+			text-decoration: none;
+			padding:0.2rem 0.1rem 0.22rem 0.17rem;
+			overflow: hidden;  
+			text-overflow: ellipsis;  
+			word-break: break-all;  
+			-webkit-box-orient: vertical;  
+			-webkit-line-clamp:2;
+			display: -webkit-box;
+    		display: -moz-box;
+			&.test-right{
+				border-left-color:#9ece00;
+			}
+
+			&.test-wrong{
+				border-left-color:#ff6b53;
+			}
+		}
+	}
+}
+
+
+/*测试分享页面*/
+.report-share{
+	color:$color-txt-5;
+	background-color:#ffb83c;
+	height:100%;
+	.report-share-img{
+		position:relative;
+		z-index:2;
+		padding-top:1.35rem;
+		img{
+			display:block;
+			margin:0 auto;
+			width:4.31rem;
+		}
+	}
+	.report-share-btn{
+		margin-top:-0.16rem;
+	}
+	.report-share-text{
+		line-height:0.5rem;
+		padding-top:0.5rem;
+		font-size:0.28rem;
+	}
+}
+.share-zdy-box{
+	padding:0.5rem 0 0 0;
+	font-size:0;
+	text-align:left;
+	a{
+		width:2.35rem !important;
+		height:0.6rem !important;
+		line-height:0.6rem !important;
+		font-size:0 !important;
+		display:inline-block !important;
+		float:none !important;
+		background-image: none !important;
+	    cursor: pointer !important;
+	    margin: 0 0 0.6rem 0 !important;
+	    padding:0 !important;
+		.share-zdy-btn{
+			display:inline-block;
+			width:0.8rem;
+			text-align:center;
+			vertical-align: middle;
+			i{
+				display:inline-block;
+				overflow:hidden;
+				vertical-align: middle;
+				&.qq{
+					width:0.55rem;
+					height:0.59rem;
+					background:url(../images/icon/share-qq-icon.png) no-repeat;
+					background-size:100% 100%;
+				}
+				&.wx{
+					width:0.72rem;
+					height:0.59rem;
+					background:url(../images/icon/share-wx-icon.png) no-repeat;
+					background-size:100% 100%;
+				}
+				&.qz{
+					width:0.54rem;
+					height:0.54rem;
+					background:url(../images/icon/share-z-icon.png) no-repeat;
+					background-size:100% 100%;
+				}
+				&.pyq{
+					width:0.49rem;
+					height:0.49rem;
+					background:url(../images/icon/share-pyq-icon.png) no-repeat;
+					background-size:100% 100%;
+				}
+				&.link{
+					width:0.64rem;
+					height:0.31rem;
+					background:url(../images/icon/share-link-icon.png) no-repeat;
+					background-size:100% 100%;
+				}
+			}
+			span{
+				height:100%;
+				width:0px;
+				display:inline-block;
+				overflow:hidden;
+				vertical-align: middle;
+			}
+		}
+		.share-zdy-name{
+			display:inline-block;
+			width:1.35rem;
+			vertical-align: middle;
+			text-align:left;
+			padding-left:0.2rem;
+			font-size:0.28rem;
+			color:$color-txt-5;
+		}
+	}
+}
+
+
+/*测试首页*/
+.test-index{
+	padding:0.3rem;
+	.test-index-cont{
+		padding:0.5rem 0.4rem 1.5rem 0.5rem;
+		.test-index-title{
+			line-height:0.5rem;
+			font-size:0.32rem;
+			color:$color-txt-5;
+			padding-bottom:0.4rem;
+		}
+		.test-index-subtitle{
+			line-height:0.4rem;
+			font-size:0.26rem;
+			color:$color-txt-3;
+			padding-bottom:0.4rem;
+		}
+		.test-index-detail{
+			width:5.6rem;
+			padding:0.25rem 0.1rem 0 0.2rem;
+			background-color:$color-bg1;
+			border-radius:0.1rem;
+			li{
+				font-size:0;
+				padding-bottom:0.28rem;
+			}
+			.icon-star-light,.icon-star-dis{
+				margin-right:0.1rem;
+			}
+			.test-detail-info{
+				display:inline-block;
+				vertical-align: middle;
+				color:$color-txt-4;
+				font-size:0.26rem;
+			}
+			.test-lever-text{
+				display:inline-block;
+				vertical-align: middle;
+				color:$color-main;
+				padding-left:0.15rem;
+				font-size:0.26rem;
+			}
+			.tb-left{
+				width:0.5rem;
+				padding-right:0.2rem;
+				text-align:center;
+				display:inline-block;
+				vertical-align: middle;
+			}
+			.icon-star-light,.icon-star-dis,.icon-date,.icon-edit,.icon-hourse,.icon-ren,.icon-time2,.icon-xx3{
+				display:inline-block;
+				background-size:100% 100%;
+				vertical-align: middle;
+			}
+			.icon-date{
+				width:0.34rem;
+				height:0.34rem;
+			}
+			.icon-edit{
+				width:0.35rem;
+				height:0.32rem;
+			}
+			.icon-hourse{
+				width:0.36rem;
+				height:0.3rem;
+			}
+			.icon-ren{
+				width:0.25rem;
+				height:0.36rem;
+			}
+			.icon-time2{
+				width:0.32rem;
+				height:0.32rem;
+			}
+			.icon-xx3{
+				width:0.34rem;
+				height:0.38rem;
+			}
+			.icon-star-light{
+				width:0.38rem;
+				height:0.35rem;
+			}
+			.icon-star-dis{
+				width:0.38rem;
+				height:0.35rem;
+			}
+		}
+	}
+}
